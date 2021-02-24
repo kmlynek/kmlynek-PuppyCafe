@@ -16,3 +16,16 @@ C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PuppyCafeApp.csproj
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PuppyCafeApp.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PuppyCafeApp.exe
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PuppyCafeApp.pdb
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\bin\Debug\EntityFramework.dll
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\bin\Debug\EntityFramework.xml
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\DeparmentsWindow.g.cs
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\EmployeesWindow.g.cs
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PetsWindow.g.cs
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\ProductsWindow.g.cs
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\DeparmentsWindow.baml
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\EmployeesWindow.baml
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PetsWindow.baml
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\ProductsWindow.baml
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PuppyCafeApp.csproj.CopyComplete

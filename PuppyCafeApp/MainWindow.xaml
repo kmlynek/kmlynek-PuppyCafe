@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:PuppyCafeApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid x:Name="ButtonProducts">
+        <Button x:Name="ButtonPets" Content="Button_Pets" HorizontalAlignment="Left" Margin="116,84,0,0" VerticalAlignment="Top" Width="223" Height="70" IsCancel="True" Click="ButtonPets_Click"/>
+        <Button x:Name="ButtonEmployees" Content="Button_Employees" HorizontalAlignment="Left" Margin="116,203,0,0" VerticalAlignment="Top" Width="223" Height="82" Click="ButtonEmployees_Click"/>
+        <Button x:Name="ButtonDeparments" Content="Button_Deparments" HorizontalAlignment="Left" Margin="437,203,0,0" VerticalAlignment="Top" Width="194" Height="82" Click="ButtonDeparments_Click"/>
+        <Button Content="Button_Prodfucts" HorizontalAlignment="Left" Margin="437,84,0,0" VerticalAlignment="Top" Width="194" Height="70" Click="Button_Click"/>
+
     </Grid>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\App.xaml
-11151548125
+51230403074
 4770088096
-131958137081
+18-1759760234
 18-510650725
-MainWindow.xaml;
+DeparmentsWindow.xaml;EmployeesWindow.xaml;MainWindow.xaml;PetsWindow.xaml;ProductsWindow.xaml;
 
-False
+True
 

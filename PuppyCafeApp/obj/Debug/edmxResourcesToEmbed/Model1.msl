@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="DatabaseModel.departments">
+        <MappingFragment StoreEntitySet="departments">
+          <ScalarProperty Name="departmen_id" ColumnName="departmen_id" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="department_name" ColumnName="department_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="DatabaseModel.employees">
+        <MappingFragment StoreEntitySet="employees">
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="pesel" ColumnName="pesel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pets">
+      <EntityTypeMapping TypeName="DatabaseModel.pets">
+        <MappingFragment StoreEntitySet="pets">
+          <ScalarProperty Name="pets_id" ColumnName="pets_id" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="pet_name" ColumnName="pet_name" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="DatabaseModel.products">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="products_id" ColumnName="products_id" />
+          <ScalarProperty Name="departmen_id" ColumnName="departmen_id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="type_of_product" ColumnName="type_of_product" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

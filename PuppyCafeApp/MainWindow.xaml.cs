@@ -24,5 +24,29 @@ namespace PuppyCafeApp
         {
             InitializeComponent();
         }
+
+        private void ButtonPets_Click(object sender, RoutedEventArgs e)
+        {
+            PetsWindow petsWindow = new PetsWindow();
+            petsWindow.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ProductsWindow productsWindow = new ProductsWindow();
+            productsWindow.Show();
+        }
+
+        private void ButtonEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeesWindow employeesWindow = new EmployeesWindow();
+            employeesWindow.Show();
+        }
+
+        private void ButtonDeparments_Click(object sender, RoutedEventArgs e)
+        {
+            DeparmentsWindow deparmentsWindow = new DeparmentsWindow();
+            deparmentsWindow.Show();
+        }
     }
 }
