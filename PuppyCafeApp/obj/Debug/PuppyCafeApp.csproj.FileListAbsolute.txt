@@ -29,3 +29,4 @@ C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\EmployeesWindow.bam
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PetsWindow.baml
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\ProductsWindow.baml
 C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\PuppyCafeApp.csproj.CopyComplete
+C:\Users\PC\source\repos\PuppyCafeApp\PuppyCafeApp\obj\Debug\GeneratedInternalTypeHelper.g.cs

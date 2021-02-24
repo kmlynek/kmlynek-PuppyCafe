@@ -23,5 +23,16 @@ namespace PuppyCafeApp
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            PuppyCafeApp.DatabaseDataSet databaseDataSet = ((PuppyCafeApp.DatabaseDataSet)(this.FindResource("databaseDataSet")));
+            // Load data into the table employees. You can modify this code as needed.
+            PuppyCafeApp.DatabaseDataSetTableAdapters.employeesTableAdapter databaseDataSetemployeesTableAdapter = new PuppyCafeApp.DatabaseDataSetTableAdapters.employeesTableAdapter();
+            databaseDataSetemployeesTableAdapter.Fill(databaseDataSet.employees);
+            System.Windows.Data.CollectionViewSource employeesViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("employeesViewSource")));
+            employeesViewSource.View.MoveCurrentToFirst();
+        }
     }
 }

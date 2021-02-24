@@ -23,5 +23,21 @@ namespace PuppyCafeApp
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            PuppyCafeApp.DatabaseDataSet databaseDataSet = ((PuppyCafeApp.DatabaseDataSet)(this.FindResource("databaseDataSet")));
+            // Load data into the table departments. You can modify this code as needed.
+            PuppyCafeApp.DatabaseDataSetTableAdapters.departmentsTableAdapter databaseDataSetdepartmentsTableAdapter = new PuppyCafeApp.DatabaseDataSetTableAdapters.departmentsTableAdapter();
+            databaseDataSetdepartmentsTableAdapter.Fill(databaseDataSet.departments);
+            System.Windows.Data.CollectionViewSource departmentsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("departmentsViewSource")));
+            departmentsViewSource.View.MoveCurrentToFirst();
+        }
+
+        private void ButtonRead_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -23,5 +23,26 @@ namespace PuppyCafeApp
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            PuppyCafeApp.DatabaseDataSet databaseDataSet = ((PuppyCafeApp.DatabaseDataSet)(this.FindResource("databaseDataSet")));
+            // Load data into the table products. You can modify this code as needed.
+            PuppyCafeApp.DatabaseDataSetTableAdapters.productsTableAdapter databaseDataSetproductsTableAdapter = new PuppyCafeApp.DatabaseDataSetTableAdapters.productsTableAdapter();
+            databaseDataSetproductsTableAdapter.Fill(databaseDataSet.products);
+            System.Windows.Data.CollectionViewSource productsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("productsViewSource")));
+            productsViewSource.View.MoveCurrentToFirst();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
