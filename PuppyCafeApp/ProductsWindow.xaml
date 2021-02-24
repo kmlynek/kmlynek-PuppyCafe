@@ -23,9 +23,10 @@
                 <DataGridTextColumn x:Name="type_of_productColumn" Binding="{Binding type_of_product}" Header="type of product" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="50,138,0,0" VerticalAlignment="Top" Background="#FFB8B8B8" Height="128" Width="227">
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="59,138,0,0" VerticalAlignment="Top" Background="#FFB8B8B8" Height="128" Width="227">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="36.301"/>
+                <ColumnDefinition Width="64.699"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -34,19 +35,18 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="products id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="products_idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding products_id, Mode=OneWay}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="departmen id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBox x:Name="departmen_idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding departmen_id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="product name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
-            <TextBox x:Name="product_nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding product_name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="type of product:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
-            <TextBox x:Name="type_of_productTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding type_of_product, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="products id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="products_idTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="0" Text="{Binding products_id, Mode=OneWay}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="departmen id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="departmen_idTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="1" Text="{Binding departmen_id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="product name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="product_nameTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="2" Text="{Binding product_name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="type of product:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="type_of_productTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="3" Text="{Binding type_of_product, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button x:Name="ButtonUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="74,32,0,0" VerticalAlignment="Top" Width="102" Height="35" Click="Button_Click" Grid.Column="1"/>
-        <Button x:Name="ButtonAdd" Content="ADD" HorizontalAlignment="Left" Margin="262,32,0,0" VerticalAlignment="Top" Width="102" Height="35" Click="ButtonAdd_Click"/>
-        <Button x:Name="ButtonDelete" Content="DELETE" HorizontalAlignment="Left" Margin="439,32,0,0" VerticalAlignment="Top" Width="102" Height="35"/>
-        <Button x:Name="ButtonRead" Content="READ" HorizontalAlignment="Left" Margin="50,32,0,0" VerticalAlignment="Top" Width="102" Height="35"/>
+        <Button x:Name="ButtonUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="0,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="Button_Click" Grid.Column="1"/>
+        <Button x:Name="ButtonAdd" Content="ADD" HorizontalAlignment="Left" Margin="113,33,0,0" VerticalAlignment="Top" Width="119" Height="58" Click="ButtonAdd_Click"/>
+        <Button x:Name="ButtonDelete" Content="DELETE" HorizontalAlignment="Left" Margin="340,33,0,0" VerticalAlignment="Top" Width="122" Height="58"/>
 
     </Grid>
 </Window>

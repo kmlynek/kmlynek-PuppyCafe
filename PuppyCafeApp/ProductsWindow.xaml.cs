@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace PuppyCafeApp
 {
@@ -19,20 +20,20 @@ namespace PuppyCafeApp
     /// </summary>
     public partial class ProductsWindow : Window
     {
+        DatabaseEntities productsContext = new DatabaseEntities();
+        CollectionViewSource productsView;
+
         public ProductsWindow()
         {
             InitializeComponent();
+            productsView = ((CollectionViewSource)(FindResource("productsViewSource")));
+            DataContext = this;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            PuppyCafeApp.DatabaseDataSet databaseDataSet = ((PuppyCafeApp.DatabaseDataSet)(this.FindResource("databaseDataSet")));
-            // Load data into the table products. You can modify this code as needed.
-            PuppyCafeApp.DatabaseDataSetTableAdapters.productsTableAdapter databaseDataSetproductsTableAdapter = new PuppyCafeApp.DatabaseDataSetTableAdapters.productsTableAdapter();
-            databaseDataSetproductsTableAdapter.Fill(databaseDataSet.products);
-            System.Windows.Data.CollectionViewSource productsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("productsViewSource")));
-            productsViewSource.View.MoveCurrentToFirst();
+            productsContext.products.Load();
+            productsView.Source = productsContext.products.Local;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,6 +43,15 @@ namespace PuppyCafeApp
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
+            products createProduct = new products();
+
+            createProduct.departmen_id = int.Parse(departmen_idTextBox.Text);
+            createProduct.product_name = product_nameTextBox.Text;
+            createProduct.type_of_product = type_of_productTextBox.Text;
+
+            productsContext.products.Add(createProduct);
+            productsContext.SaveChanges();
+            productsView.View.Refresh();
 
         }
     }
