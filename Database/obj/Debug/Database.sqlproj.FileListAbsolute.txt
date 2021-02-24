@@ -1,0 +1,10 @@
+C:\Users\PC\source\repos\PuppyCafeApp\Database\bin\Debug\Database.dacpac
+C:\Users\PC\source\repos\PuppyCafeApp\Database\bin\Debug\Database.dll
+C:\Users\PC\source\repos\PuppyCafeApp\Database\bin\Debug\Database.pdb
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\Model.xml
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\refactor.xml
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\postdeploy.sql
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\predeploy.sql
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\Database.dll
+C:\Users\PC\source\repos\PuppyCafeApp\Database\obj\Debug\Database.pdb
