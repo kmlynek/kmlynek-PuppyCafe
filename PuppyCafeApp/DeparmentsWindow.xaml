@@ -11,14 +11,14 @@
         <CollectionViewSource x:Key="departmentsViewSource" Source="{Binding departments, Source={StaticResource databaseDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource departmentsViewSource}">
-        <DataGrid x:Name="departmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="326,87,66,132" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="departmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="325,135,67,84" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="departmen_idColumn" Binding="{Binding departmen_id}" Header="departmen id" IsReadOnly="True" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="employee_idColumn" Binding="{Binding employee_id}" Header="employee id" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="department_nameColumn" Binding="{Binding department_name}" Header="department name" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top" Background="#FFB8B8B8">
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="46,132,0,0" VerticalAlignment="Top" Background="#FFB8B8B8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -35,6 +35,8 @@
             <Label Content="department name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
             <TextBox x:Name="department_nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding department_name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-
+        <Button x:Name="ButtonUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="576,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="Button_Click"/>
+        <Button x:Name="ButtonAdd" Content="ADD" HorizontalAlignment="Left" Margin="113,33,0,0" VerticalAlignment="Top" Width="119" Height="58" Click="ButtonAdd_Click"/>
+        <Button x:Name="ButtonDelete" Content="DELETE" HorizontalAlignment="Left" Margin="340,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="ButtonDelete_Click"/>
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,25 +20,67 @@ namespace PuppyCafeApp
     /// </summary>
     public partial class DeparmentsWindow : Window
     {
+        DatabaseEntities deparmentsContext = new DatabaseEntities();
+        CollectionViewSource deparmentView;
+
+
         public DeparmentsWindow()
         {
             InitializeComponent();
+            deparmentView = ((CollectionViewSource)(FindResource("departmentsViewSource")));
+            DataContext = this;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            PuppyCafeApp.DatabaseDataSet databaseDataSet = ((PuppyCafeApp.DatabaseDataSet)(this.FindResource("databaseDataSet")));
-            // Load data into the table departments. You can modify this code as needed.
-            PuppyCafeApp.DatabaseDataSetTableAdapters.departmentsTableAdapter databaseDataSetdepartmentsTableAdapter = new PuppyCafeApp.DatabaseDataSetTableAdapters.departmentsTableAdapter();
-            databaseDataSetdepartmentsTableAdapter.Fill(databaseDataSet.departments);
-            System.Windows.Data.CollectionViewSource departmentsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("departmentsViewSource")));
-            departmentsViewSource.View.MoveCurrentToFirst();
+            deparmentsContext.departments.Load();
+            deparmentView.Source = deparmentsContext.departments.Local;
         }
 
-        private void ButtonRead_Click(object sender, RoutedEventArgs e)
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                departments createDeparment = new departments();
 
+                createDeparment.department_name = department_nameTextBox.Text;
+                createDeparment.employee_id = int.Parse(employee_idTextBox.Text);
+
+                deparmentsContext.departments.Add(createDeparment);
+                deparmentsContext.SaveChanges();
+                deparmentView.View.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check data or select item", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return;
+            }
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var selectedItem = deparmentView.View.CurrentItem as departments;
+
+                var selectedItemDelete = (from c in deparmentsContext.departments
+                                          where c.departmen_id == selectedItem.departmen_id
+                                          select c).FirstOrDefault();
+
+                deparmentsContext.departments.Remove(selectedItemDelete);
+                deparmentsContext.SaveChanges();
+                deparmentView.View.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check data or select item", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            deparmentView.View.Refresh();
         }
     }
 }
