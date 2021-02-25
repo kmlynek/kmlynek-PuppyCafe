@@ -26,26 +26,62 @@ namespace PuppyCafeApp
         public PetsWindow()
         {
             InitializeComponent();
-            
+            petView = ((CollectionViewSource)(FindResource("petsViewSource")));
+            DataContext = this;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            PuppyCafeApp.DatabaseDataSet databaseDataSet = ((PuppyCafeApp.DatabaseDataSet)(this.FindResource("databaseDataSet")));
-            // Load data into the table pets. You can modify this code as needed.
-            PuppyCafeApp.DatabaseDataSetTableAdapters.petsTableAdapter databaseDataSetpetsTableAdapter = new PuppyCafeApp.DatabaseDataSetTableAdapters.petsTableAdapter();
-            databaseDataSetpetsTableAdapter.Fill(databaseDataSet.pets);
-            System.Windows.Data.CollectionViewSource petsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("petsViewSource")));
-            petsViewSource.View.MoveCurrentToFirst();
+            petsContext.pets.Load();
+            petView.Source = petsContext.pets.Local;
         }
 
-        private void ButtonRead_Click(object sender, RoutedEventArgs e)
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            //petView = ((CollectionViewSource)(FindResource("petView")));
-            //DataContext = this;
-            //petsContext.pets.Load();
-            //petView.Source = petsContext.pets.Local;
+            try
+            {
+                pets createPets = new pets();
+
+                createPets.employee_id = int.Parse(employee_idTextBox.Text);
+                createPets.pet_name = pet_nameTextBox.Text;
+                createPets.age = int.Parse(ageTextBox.Text);
+
+                petsContext.pets.Add(createPets);
+                petsContext.SaveChanges();
+                petView.View.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check data or select item", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            petView.View.Refresh();
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var selectedItem = petView.View.CurrentItem as pets;
+
+                var selectedItemDelete = (from c in petsContext.pets
+                                          where c.pets_id == selectedItem.pets_id
+                                          select c).FirstOrDefault();
+
+                petsContext.pets.Remove(selectedItemDelete);
+                petsContext.SaveChanges();
+                petView.View.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check data or select item", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return;
+            }
         }
     }
 }

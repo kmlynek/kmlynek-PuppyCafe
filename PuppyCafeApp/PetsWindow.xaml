@@ -11,7 +11,7 @@
         <CollectionViewSource x:Key="petsViewSource" Source="{Binding pets, Source={StaticResource databaseDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource petsViewSource}">
-        <DataGrid x:Name="petsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="340,105,52,114" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="petsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="343,136,49,83" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="pets_idColumn" Binding="{Binding pets_id}" Header="pets id" IsReadOnly="True" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="employee_idColumn" Binding="{Binding employee_id}" Header="employee id" Width="SizeToHeader"/>
@@ -19,7 +19,7 @@
                 <DataGridTextColumn x:Name="ageColumn" Binding="{Binding age}" Header="age" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="66,105,0,0" VerticalAlignment="Top" Background="#FFB8B8B8" Width="220">
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="66,133,0,0" VerticalAlignment="Top" Background="#FFB8B8B8" Width="220">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0"/>
                 <ColumnDefinition Width="84"/>
@@ -40,6 +40,8 @@
             <Label Content="age:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
             <TextBox x:Name="ageTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="3" Text="{Binding age, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-
+        <Button x:Name="ButtonUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="343,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="Button_Click" RenderTransformOrigin="0.753,0.451"/>
+        <Button x:Name="ButtonAdd" Content="ADD" HorizontalAlignment="Left" Margin="98,33,0,0" VerticalAlignment="Top" Width="119" Height="58" Click="ButtonAdd_Click" RenderTransformOrigin="0.777,0.579"/>
+        <Button x:Name="ButtonDelete" Content="DELETE" HorizontalAlignment="Left" Margin="574,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="ButtonDelete_Click"/>
     </Grid>
 </Window>
