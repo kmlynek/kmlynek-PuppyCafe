@@ -41,7 +41,7 @@ namespace PuppyCafeApp {
     public partial class ProductsWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 18 "..\..\ProductsWindow.xaml"
+        #line 19 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid productsDataGrid;
         
@@ -49,7 +49,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 20 "..\..\ProductsWindow.xaml"
+        #line 21 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn products_idColumn;
         
@@ -57,7 +57,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 21 "..\..\ProductsWindow.xaml"
+        #line 22 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn departmen_idColumn;
         
@@ -65,7 +65,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 22 "..\..\ProductsWindow.xaml"
+        #line 23 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn product_nameColumn;
         
@@ -73,7 +73,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 23 "..\..\ProductsWindow.xaml"
+        #line 24 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn type_of_productColumn;
         
@@ -81,7 +81,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 26 "..\..\ProductsWindow.xaml"
+        #line 27 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid grid1;
         
@@ -89,7 +89,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 39 "..\..\ProductsWindow.xaml"
+        #line 40 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox products_idTextBox;
         
@@ -97,7 +97,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 41 "..\..\ProductsWindow.xaml"
+        #line 42 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox departmen_idTextBox;
         
@@ -105,7 +105,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 43 "..\..\ProductsWindow.xaml"
+        #line 44 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox product_nameTextBox;
         
@@ -113,7 +113,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 45 "..\..\ProductsWindow.xaml"
+        #line 46 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox type_of_productTextBox;
         
@@ -121,7 +121,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 47 "..\..\ProductsWindow.xaml"
+        #line 48 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ButtonUpdate;
         
@@ -129,7 +129,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 48 "..\..\ProductsWindow.xaml"
+        #line 49 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ButtonAdd;
         
@@ -137,7 +137,7 @@ namespace PuppyCafeApp {
         #line hidden
         
         
-        #line 49 "..\..\ProductsWindow.xaml"
+        #line 50 "..\..\ProductsWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ButtonDelete;
         
@@ -215,7 +215,7 @@ namespace PuppyCafeApp {
             case 12:
             this.ButtonUpdate = ((System.Windows.Controls.Button)(target));
             
-            #line 47 "..\..\ProductsWindow.xaml"
+            #line 48 "..\..\ProductsWindow.xaml"
             this.ButtonUpdate.Click += new System.Windows.RoutedEventHandler(this.Button_Click);
             
             #line default
@@ -224,7 +224,7 @@ namespace PuppyCafeApp {
             case 13:
             this.ButtonAdd = ((System.Windows.Controls.Button)(target));
             
-            #line 48 "..\..\ProductsWindow.xaml"
+            #line 49 "..\..\ProductsWindow.xaml"
             this.ButtonAdd.Click += new System.Windows.RoutedEventHandler(this.ButtonAdd_Click);
             
             #line default
@@ -233,7 +233,7 @@ namespace PuppyCafeApp {
             case 14:
             this.ButtonDelete = ((System.Windows.Controls.Button)(target));
             
-            #line 49 "..\..\ProductsWindow.xaml"
+            #line 50 "..\..\ProductsWindow.xaml"
             this.ButtonDelete.Click += new System.Windows.RoutedEventHandler(this.ButtonDelete_Click);
             
             #line default

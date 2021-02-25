@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PuppyCafeApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="ButtonProducts">
-        <Button x:Name="ButtonPets" Content="Button_Pets" HorizontalAlignment="Left" Margin="116,84,0,0" VerticalAlignment="Top" Width="223" Height="70" IsCancel="True" Click="ButtonPets_Click"/>
-        <Button x:Name="ButtonEmployees" Content="Button_Employees" HorizontalAlignment="Left" Margin="116,203,0,0" VerticalAlignment="Top" Width="223" Height="82" Click="ButtonEmployees_Click"/>
-        <Button x:Name="ButtonDeparments" Content="Button_Deparments" HorizontalAlignment="Left" Margin="437,203,0,0" VerticalAlignment="Top" Width="194" Height="82" Click="ButtonDeparments_Click"/>
-        <Button Content="Button_Prodfucts" HorizontalAlignment="Left" Margin="437,84,0,0" VerticalAlignment="Top" Width="194" Height="70" Click="Button_Click"/>
+        Title="Puppy Cafe" Height="483.366" Width="273.663" Background="#FF814949" ResizeMode="NoResize">
+    <Grid x:Name="ButtonProducts" Margin="20,0,23,9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="177*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonPets" Content="Pets" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" Width="223" Height="70" IsCancel="True" Click="ButtonPets_Click" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonEmployees" Content="Employees" HorizontalAlignment="Left" Margin="0,351,0,0" VerticalAlignment="Top" Width="223" Height="82" Click="ButtonEmployees_Click" RenderTransformOrigin="-0.389,0.474" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonDeparments" Content="Deparments" HorizontalAlignment="Left" Margin="0,235,0,0" VerticalAlignment="Top" Width="223" Height="82" Click="ButtonDeparments_Click" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button Content="Products" HorizontalAlignment="Left" Margin="0,129,0,0" VerticalAlignment="Top" Width="223" Height="70" Click="Button_Click" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

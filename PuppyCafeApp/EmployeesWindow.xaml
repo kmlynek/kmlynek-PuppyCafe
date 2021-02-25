@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PuppyCafeApp"
         mc:Ignorable="d"
-        Title="EmployeesWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Employees Puppy Cafe" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize" Background="#FF4D2A2A">
     <Window.Resources>
         <local:DatabaseDataSet x:Key="databaseDataSet"/>
         <CollectionViewSource x:Key="employeesViewSource" Source="{Binding employees, Source={StaticResource databaseDataSet}}"/>
