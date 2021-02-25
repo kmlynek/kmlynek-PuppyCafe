@@ -38,21 +38,50 @@ namespace PuppyCafeApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            productsView.View.Refresh();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            products createProduct = new products();
+            try
+            {
+                products createProduct = new products();
 
-            createProduct.departmen_id = int.Parse(departmen_idTextBox.Text);
-            createProduct.product_name = product_nameTextBox.Text;
-            createProduct.type_of_product = type_of_productTextBox.Text;
+                createProduct.departmen_id = int.Parse(departmen_idTextBox.Text);
+                createProduct.product_name = product_nameTextBox.Text;
+                createProduct.type_of_product = type_of_productTextBox.Text;
 
-            productsContext.products.Add(createProduct);
-            productsContext.SaveChanges();
-            productsView.View.Refresh();
+                productsContext.products.Add(createProduct);
+                productsContext.SaveChanges();
+                productsView.View.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check data or select item", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return;
+            }
 
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var selectedItem = productsView.View.CurrentItem as products;
+
+                var selectedItemDelete = (from c in productsContext.products
+                                          where c.products_id == selectedItem.products_id
+                                          select c).FirstOrDefault();
+
+                productsContext.products.Remove(selectedItemDelete);
+                productsContext.SaveChanges();
+                productsView.View.Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Check data or select item", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return;
+            }
         }
     }
 }

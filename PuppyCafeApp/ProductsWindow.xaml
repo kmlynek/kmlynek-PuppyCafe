@@ -46,7 +46,7 @@
         </Grid>
         <Button x:Name="ButtonUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="0,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="Button_Click" Grid.Column="1"/>
         <Button x:Name="ButtonAdd" Content="ADD" HorizontalAlignment="Left" Margin="113,33,0,0" VerticalAlignment="Top" Width="119" Height="58" Click="ButtonAdd_Click"/>
-        <Button x:Name="ButtonDelete" Content="DELETE" HorizontalAlignment="Left" Margin="340,33,0,0" VerticalAlignment="Top" Width="122" Height="58"/>
+        <Button x:Name="ButtonDelete" Content="DELETE" HorizontalAlignment="Left" Margin="340,33,0,0" VerticalAlignment="Top" Width="122" Height="58" Click="ButtonDelete_Click"/>
 
     </Grid>
 </Window>
